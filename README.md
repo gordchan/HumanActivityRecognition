@@ -25,10 +25,10 @@ The tidy file is created through the following steps:
 2. Load the following componenst of the dataset:
     - Lables for the features of the variables
     - Lables for the type of activities
-        - For the Test and Train data sets:
-            - Subject ID
-            - Activity index
-            - Main values dataset
+    - For the Test and Train data sets:
+        - Subject ID
+        - Activity index
+        - Main values dataset
 3. Merge the three components of the Test and Train data sets
 4. Merge the Test and Train data sets into a single data set
 5. Select the Subject ID, Activity index, and columns related to mean and SD of the variables into a data frame
@@ -104,7 +104,7 @@ tail(data)
 ```
 
 ##Description of the variables in the narrow_data.txt file
-General description of the file including:
+General description of the file:
 
 
 ```r
@@ -251,7 +251,7 @@ print(feature)
  
 The names are construted through a custom function which look for naming elements from the orignal variable name:
 
-Sequence | element from orinal name | elements used in new name
+Sequence | Element from orinal name | Elements used in new name
 -------- | ------------------------ | -------------------------
 1        | *t* or *f*               | *time domain* or *function domain*
 2        | *body* or *gravity*      | *body* or *gravity*
