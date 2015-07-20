@@ -59,20 +59,13 @@ head(data)
 ```
 
 ```
-##   subject activity                                                 feature
-## 1       1   LAYING function_domain_body_acceleration_jerk_signal_magnitude
-## 2       1   LAYING    function_domain_body_acceleration_jerk_x-axis_signal
-## 3       1   LAYING    function_domain_body_acceleration_jerk_y-axis_signal
-## 4       1   LAYING    function_domain_body_acceleration_jerk_z-axis_signal
-## 5       1   LAYING      function_domain_body_acceleration_signal_magnitude
-## 6       1   LAYING         function_domain_body_acceleration_x-axis_signal
-##         mean        std
-## 1 -0.9333004 -0.9218040
-## 2 -0.9570739 -0.9641607
-## 3 -0.9224626 -0.9322179
-## 4 -0.9480609 -0.9605870
-## 5 -0.8617676 -0.7983009
-## 6 -0.9390991 -0.9244374
+##                                                                      
+## 1 function (..., list = character(), package = NULL, lib.loc = NULL, 
+## 2     verbose = getOption("verbose"), envir = .GlobalEnv)            
+## 3 {                                                                  
+## 4     fileExt <- function(x) {                                       
+## 5         db <- grepl("\\\\.[^.]+\\\\.(gz|bz2|xz)$", x)              
+## 6         ans <- sub(".*\\\\.", "", x)
 ```
 
 ```r
@@ -80,27 +73,13 @@ tail(data)
 ```
 
 ```
-##      subject         activity
-## 5935      30 WALKING_UPSTAIRS
-## 5936      30 WALKING_UPSTAIRS
-## 5937      30 WALKING_UPSTAIRS
-## 5938      30 WALKING_UPSTAIRS
-## 5939      30 WALKING_UPSTAIRS
-## 5940      30 WALKING_UPSTAIRS
-##                                                feature        mean
-## 5935         time_domain_body_gyroscopic_y-axis_signal -0.07796065
-## 5936         time_domain_body_gyroscopic_z-axis_signal  0.08146993
-## 5937 time_domain_gravity_acceleration_signal_magnitude -0.13762786
-## 5938    time_domain_gravity_acceleration_x-axis_signal  0.93182983
-## 5939    time_domain_gravity_acceleration_y-axis_signal -0.22664729
-## 5940    time_domain_gravity_acceleration_z-axis_signal -0.02214011
-##              std
-## 5935 -0.08404815
-## 5936 -0.21157358
-## 5937 -0.32741082
-## 5938 -0.95403362
-## 5939 -0.91493394
-## 5940 -0.86240279
+##                                                                          
+## 160         if (!found)                                                  
+## 161             warning(gettextf("data set %s not found", sQuote(name)), 
+## 162                 domain = NA)                                         
+## 163     }                                                                
+## 164     invisible(names)                                                 
+## 165 }
 ```
 
 ##Description of the variables in the narrow_data.txt file
@@ -275,3 +254,8 @@ Sequence | Element from orinal name | Elements used in new name
 
 ##Sources
 Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+Description of the dataset can be found from:
+https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Dataset can be downloaded from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip

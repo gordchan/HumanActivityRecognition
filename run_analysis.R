@@ -12,11 +12,11 @@ labels <- read.table("./UCI HAR Dataset/features.txt", stringsAsFactors=FALSE)
 activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt", stringsAsFactors=FALSE)
 ## Test data set
 subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt", col.names = "subject") #Subject id
-Y_test <- read.table("./UCI HAR Dataset/test/Y_test.txt", col.names = "activity") #Activity index
+Y_test <- read.table("./UCI HAR Dataset/test/y_test.txt", col.names = "activity") #Activity index
 X_test <- read.table("./UCI HAR Dataset/test/X_test.txt", col.names = labels[[2]]) #Main data set
 ## Train data set
 subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt", col.names = "subject") #Subject id
-Y_train <- read.table("./UCI HAR Dataset/train/Y_train.txt", col.names = "activity") #Activity index
+Y_train <- read.table("./UCI HAR Dataset/train/y_train.txt", col.names = "activity") #Activity index
 X_train <- read.table("./UCI HAR Dataset/train/X_train.txt", col.names = labels[[2]]) #Main data set
 
 ## Convert data table to data.table
@@ -46,9 +46,6 @@ mf <- grep("meanFreq", names(data), value = FALSE)
 msd <- msd[!msd %in% mf]
 labels_msd <- labels[msd-2,] ## New selected labels for easy ref
 names(labels_msd) <- c("index","label")
-### To be revised, should name with desc names in Part 4.###
-#labels_msd <- mutate(labels_msd, feature = sub("[[:punct:]]mean[[:punct:]][[:punct:]]", "", label))
-#labels_msd <- mutate(labels_msd, feature = sub("[[:punct:]]std[[:punct:]][[:punct:]]", "", feature))
 
 ## Select columns
 s_data <- data[c(1,2,msd)]
